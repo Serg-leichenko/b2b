@@ -1,0 +1,95 @@
+.login {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  &__form {
+    &_fild {
+      position: relative;
+      text-align: center;
+      margin-bottom: 25px;
+      input {
+        border: 0;
+        border-bottom: 1px solid $dark-grey;
+        width: 375px;
+        outline: none;
+        &::placeholder {
+          color: $dark-grey;
+        }
+      }
+      .invalid {
+        color: $red;
+        position: absolute;
+        top: 24px;
+        left: 50px;
+        font-size: 10px;
+      }
+      span {
+        .eye-login {
+          color: $dark-grey;
+        }
+      }
+    }
+    &_remember {
+      width: 375px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      font-size: 14px;
+      position: relative;
+      input {
+        display: none;
+      }
+      input[type="checkbox"]:checked + label:after {
+        display: block;
+        content: "\1F5F8";
+        position: absolute;
+        left: 0;
+        top: 1px;
+        color: $blue-hed;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      &_check {
+        color: $dark-grey;
+        margin-left: 20px;
+        &:before {
+          display: block;
+          content: "";
+          width: 15px;
+          height: 15px;
+          border: 1px solid $dark-grey;
+          border-radius: 50%;
+          position: absolute;
+          left: -2px;
+          top: 3px;
+        }
+      }
+      &_pass {
+        color: $blue-hed;
+        cursor: pointer;
+      }
+    }
+    &_btn {
+      margin-top: 35px;
+      button {
+        width: 375px;
+        border: 0;
+        outline: none;
+        color: $white;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: $bg-btn-order;
+        padding: 12px 0px;
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        margin: auto;
+      }
+    }
+  }
+}
